@@ -45,18 +45,14 @@ app.use('/api/v1/patients', patientRoutes);
 app.use('/api/v1/medicine', medicineRoutes);
 
 // Default route
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'Welcome to the doctor pages',
-  });
-});
-
-// Start the server listening on the specified port
-// const port = process.env.PORT || 3001;
-// server.listen(port, () => {
-//     console.log(`Server is running on port ${port}`);
+// app.get('/', (req: Request, res: Response) => {
+//   res.status(200).json({
+//     status: 'success',
+//     message: 'Welcome to the doctor pages',
+//   });
 // });
+
+
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   console.error('Error:', err.message);
